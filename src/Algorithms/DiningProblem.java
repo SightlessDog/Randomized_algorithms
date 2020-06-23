@@ -42,11 +42,20 @@ public class DiningProblem {
         }
     }
 
+    public static boolean canTakeFork(int number){
+
+        if (forks.get(number).amTaken)return false;
+        else{
+            return true;
+        }
+    }
+
 
     public static boolean takeFork(int number){
 
         if (forks.get(number).amTaken)return false;
         else{
+            forks.get(number).amTaken =true;
             return true;
         }
     }
